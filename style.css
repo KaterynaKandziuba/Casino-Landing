@@ -1,0 +1,470 @@
+html, body, div, span, applet, object, iframe, input,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('./assets/fonts/Quicksand/static/Quicksand-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Cabin";
+    src: url('./assets/fonts/Cabin/static/Cabin/Cabin-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Cabin Medium";
+    src: url('./assets/fonts/Cabin/static/Cabin/Cabin-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Cabin SemiBold";
+    src: url('./assets/fonts/Cabin/static/Cabin/Cabin-SemiBold.ttf');
+}
+
+@media (max-width: 414px) {
+    .content{
+        margin: 66px 21px 0px 20px;
+    }
+
+    h2{
+        font-size: 36px;
+        width: 373px;
+    }
+
+    .description {
+        margin-bottom: 40px;
+        font-size: 16px;
+        line-height: 180%;
+    
+        color: #E8E8E8;
+    }
+
+    .breadcrumps{
+        width: inherit;
+        font-size: 16px;
+        line-height: 180%;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin: 40px 0px;
+    }
+
+    .breadcrumps>span {
+        display: flex;
+        align-items: center;
+        margin: 0px 20px 23px 0px;
+    }
+
+    .breadcrumps img {
+        max-height: 32px;
+        max-width: 32px;
+        margin-right: 18px;
+    }
+
+    .link-large{
+        font-size: 16px;
+    }
+
+    .header-cell{
+        display: none;
+    }
+
+    .cards-table{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 40px;
+    }
+
+    .card-cell {
+        max-width: 374px;
+        align-items: center;
+
+        padding: 25px 25px 0px 25px;
+
+        font-size: 16px;
+        line-height: 180%;
+    }
+
+    .card-cell:nth-child(6n+1){
+        display: none;
+        width: fit-content;
+    }
+
+    .card-cell:nth-child(6n+2){
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .card-cell:nth-child(6n+6){
+        border-radius: 0px 0px 15px 15px;
+        margin-bottom: 25px;
+    }
+
+    .card-cell.bonus{
+        padding-top: 5px;
+    }
+
+    .green-txt{
+        font-size: 36px;
+        line-height: 130%;
+    }
+
+    .play-now{
+        padding-bottom: 40px;
+    }
+
+    .get-bonus{
+        width: 324px;
+        height: 64px;
+        padding: 19px 30px;
+
+        background: #36C727;
+        border-radius: 12px;
+    }
+
+    .logo-grid {
+        grid-template-columns: 97px 97px 97px;
+        grid-template-rows: auto;
+    }
+
+    .logo-grid img{
+        width: 97px;
+        height: 43px;;
+    }
+
+    button{
+        display: block;
+        width: 234px;
+        height: 64px;
+        left: 845px;
+        top: 1299px;
+        background: #1D1E20;
+    
+        border: 1px solid #36C727;
+        border-radius: 12px;
+    
+        font-family: 'Cabin', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        text-align: center;
+    
+        color: #FFFFFF;
+    }
+
+    .rating .rate label{
+        height: 21px;
+        width: 21px;
+    }
+
+    .rating .rate label:before {
+        left: -50%;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-width: 415px) {  
+    .content{
+        position: relative;
+        min-width: 1286px;
+        margin: 224px auto;
+        padding: 0px 320px;
+    }
+
+    h2 {
+        position: relative;
+        width: max-content;
+        font-size: 48px;
+    }
+
+    .description {
+        width: 1280px;
+        height: 58px;
+
+        font-size: 18px;
+        line-height: 160%;
+    }
+
+    .breadcrumps{
+        height: 50px;
+        max-width: 1286px;
+        display: flex;
+        margin: 50px 0px;
+
+        font-size: 18px;
+    }
+
+    .breadcrumps>span {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumps img {
+        max-height: 50px;
+        max-width: 50px;
+        margin-right: 18px;
+    }
+
+    .breadcrumps .benefits{
+        margin-right: 30px;
+    }
+
+    .breadcrumps .link-large{
+        position: relative;
+        margin-left: auto;
+    }
+
+    .link-large{
+        font-size: 18px;
+    }
+
+    .cards-table{
+        grid-template-columns: 100px repeat(5, 1fr);
+        position: relative;
+        width: inherit;
+        margin-bottom: 50px;
+    }
+
+    .header-cell{
+        text-align: center;
+        font-family: 'Cabin', sans-serif;
+        color: #FFFFFF;
+        padding-bottom: 10px;
+    }
+
+    .card-cell {
+        height: 90px;
+        padding: 20px;
+        margin: 10px 0px;
+
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .card-cell:nth-child(6n+1){
+        border-radius: 15px 0px 0px 15px;
+        padding: 20px 20px 20px 64px;
+
+        justify-content: center;
+    }
+
+    .selected{
+        background-color: #2FC423;
+        width: 32px;
+        height: 110px;
+        
+        background: linear-gradient(119.17deg, #CAFF70 -97.63%, #2FC423 80.67%);
+        border-radius: 20px 0px 0px 20px;
+        position: absolute;
+        left: -2px;
+        z-index: -1;
+    }
+
+    .card-cell:nth-child(6n+6){
+        border-radius: 0px 15px 15px 0px;
+        padding: 20px 64px;
+
+        justify-content: center;
+    }
+
+    .rating{
+        align-items: center;
+    }
+
+    .green-txt{
+        font-size: 20px;
+        line-height: 160%;
+        color: #2FC423;
+    }
+
+    .get-bonus {
+        margin: 0%;
+        width: 164px;
+        height: 64px;
+
+        background: linear-gradient(119.17deg, #CAFF70 -97.63%, #2FC423 80.67%);
+        border: 12px;
+    }
+
+    .logo-grid{
+        grid-template-columns: 80px 80px 80px;
+        grid-template-rows: auto;
+    }
+
+    button{
+        display: block;
+        width: 234px;
+        height: 64px;
+        background: #1D1E20;
+
+        border: 1px solid #36C727;
+        border-radius: 12px;
+
+        font-family: 'Cabin SemiBold', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+}
+
+body{
+    background: #1D1E20;
+}
+
+.content{
+    position: relative;
+}
+
+h2 {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    color: #FFFFFF;
+}
+
+.breadcrumps{
+    color:  #FFFFFF;
+    font-family: 'Cabin', sans-serif;
+    line-height: 160%;
+}
+
+.link{
+    text-decoration-line: underline;
+    color: #36C727;
+}
+
+.link-large{
+    font-family: 'Cabin Semibold', sans-serif;
+    line-height: 160%;
+}
+
+.description {
+    margin-top: 25px;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+
+    color: #E8E8E8;
+}
+
+.cards-table{
+    display: grid;
+}
+
+.card-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 6px;
+    width: auto;
+    
+    background: #242528;
+    font-family: 'Cabin', sans-serif;
+    color: #FFFFFF;
+}
+
+.casino-img {
+    height: 90px;
+    width: 90px;
+    align-self: center;
+}
+
+span {
+    width: max-content;
+}
+
+.green-txt{
+    font-family: 'Quicksand', sans-serif;
+    color: #2FC423;
+}
+
+.link-txt{
+    width: 76px;
+    height: 20px;
+
+    font-family: 'Cabin', sans-serif;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.logo-grid{
+    display: grid;
+    row-gap: 6px;
+    margin: auto;
+}
+
+button:disabled{
+    border-color: white;
+    color: gray;
+}
+
+.rating-stars{
+    color: #2FC423;
+}
+
+.rate {
+    display: inline-block;
+}
+  
+.rate input {
+    position: relative;
+    display: none;
+}
+  
+.rate label {
+    float: right;
+}
+  
+.rate label:before {
+    content: url('./assets/rating-star.svg');
+    opacity: 50%;
+    left: -50%;
+    height: -50%;
+    margin: 0px 1px;
+    width: 11.69px;
+    height: 11.63px;
+}
+  
+.rate input:checked ~ label:before {
+    opacity: 100%;
+}
+
+span.rate-calc{
+    font-size: 18px;
+    line-height: 160%;
+    color: #E8E8E8;
+}
+
+span.bonus-spins{
+    font-family: "Cabin Medium", sans-serif;
+}
+
+#seeAll{
+    margin: 0 auto 300px;
+}
